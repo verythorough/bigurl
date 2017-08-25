@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BigURL Bookmarlet</title>
+</head>
+<body>
+  <header>
+    <h1>BigURL Bookmarlet</h1>
+  </header>
+  <main>
+    <p>Click the link below to see this page's URL in big, audience-readable text (then click the box to make it go away).</p>
+
+    <p><a id="codeOut" href='javascript:(function(){javascript:(function(){var box=document.createElement("p"),addr=location.href;box.style.cssText="background:#fff; position:fixed; top: 0; z-index:5000; font-family:monospace; width:100%; text-align:center; margin:0; padding:1em; box-sizing:border-box";box.style.fontSize=(addr.length/20)+"vw";box.textContent=addr;box.addEventListener("click",function(){this.style.display="none";});document.body.appendChild(box);})();})();'>BigURL</a></p>
+
+    <p>If you'd like to use this on other pages, drag the link to your bookmark bar, and you've got a fancy bookmarklet! I'm planning to add automated URL shortening soon, so check back later to update. :)</p>
+  </main>
+  <footer>
+    <p>Made with love under MIT License. Check out the source code on <a href="https://github.com/verythorough/bigurl">GitHub</a><p>
+  </footer>
+</body>
+</html>
