@@ -13,8 +13,8 @@
   <main>
     <p>Click the link below to see this page's URL in big, audience-readable text (then click the box to make it go away).</p>
 
-    <p><a id="codeOut" href='javascript:(function(){javascript:(function(){var box=document.createElement("p"),addr=location.href;box.style.cssText="background:#fff; position:fixed; top: 0; z-index:5000; font-family:monospace; width:100%; text-align:center; margin:0; padding:1em; box-sizing:border-box";box.style.fontSize=(addr.length/20)+"vw";box.textContent=addr;box.addEventListener("click",function(){this.style.display="none";});document.body.appendChild(box);})();})();'>BigURL</a></p>
-
+    <p><a id="codeOut" href='javascript:(function(){var box=document.createElement("div"),bigAddr=document.createElement("p"),closeLink=document.createElement("button"),updateLink=document.createElement("a");addr=location.href;box.id="bigUrlBox";box.style.cssText="background:#fff; position:fixed; top: 0; z-index:5000; font-family:monospace; width:100%; text-align:center; margin:0; padding:1em; box-sizing:border-box";closeLink.style.float="right";closeLink.textContent="X";closeLink.addEventListener("click",function(){document.body.removeChild(box);});bigAddr.style.fontSize=(addr.length/20)+"vw";bigAddr.textContent=addr;updateLink.href="https://bigurl.netlify.com";updateLink.target="blank";updateLink.textContent="Check for updates to this bookmarklet :)";updateLink.style.float="left";box.appendChild(closeLink);box.appendChild(bigAddr);box.appendChild(updateLink);document.body.appendChild(box);})();'>BigURL</a></p>
+    
     <p>If you'd like to use this on other pages, drag the link to your bookmark bar, and you've got a fancy bookmarklet! I'm planning to add automated URL shortening soon, so check back later to update. :)</p>
   </main>
   <footer>
